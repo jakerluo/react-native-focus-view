@@ -8,9 +8,9 @@
  * https://github.com/facebook/react-native
  */
 
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
-import ReactNativeFocusView from 'react-native-focus-view';
+import React, {Component} from 'react';
+import {StyleSheet, Text, View, Button, TouchableOpacity} from 'react-native';
+import FocusView from 'react-native-focus-view';
 
 export default class App extends Component<{}> {
   render() {
@@ -19,7 +19,11 @@ export default class App extends Component<{}> {
         <Text style={styles.welcome}>☆ReactNativeFocusView example☆</Text>
         <Text style={styles.instructions}>STATUS: loaded</Text>
         <Text style={styles.welcome}>☆☆☆</Text>
-        <ReactNativeFocusView />
+        <FocusView descendantFocusability={false}>
+          <TouchableOpacity>
+            <Button title={'aaa'} />
+          </TouchableOpacity>
+        </FocusView>
       </View>
     );
   }

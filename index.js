@@ -1,5 +1,3 @@
-import { requireNativeComponent } from 'react-native';
+import FocusView from './src/index'
 
-const ReactNativeFocusView = requireNativeComponent('ReactNativeFocusView', null);
-
-export default ReactNativeFocusView;
+export default FocusView;
